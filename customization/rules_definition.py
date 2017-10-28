@@ -43,3 +43,10 @@ def rule_custom_type_example(**kwargs):
     MESSAGE = "[CUSTOM TYPE] Custom issue occurred."
     if True:
         result_logger.info(MESSAGE)
+
+
+@add_description(" - TEMPLATE RULE: Rule that should be skipped.")
+def rule_skip_me(**kwargs):
+    MESSAGE = "[TYPE] This rule should be skipped if SkipRulesFile parameter is specified in config file."
+    if True:
+        result_logger.info(MESSAGE)
