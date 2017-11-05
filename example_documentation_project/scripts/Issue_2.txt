@@ -1,0 +1,20 @@
+Summary:   
+
+Type: Defect
+
+Feature: Unknown_Feature
+
+Build Number: 12.34
+
+Priority: Super HIGH!!!
+
+Reported By: Anonimous
+
+Reported On: 24-24-1212
+
+Environment: 
+
+Description:
+
+
+Steps To Reproduce:
