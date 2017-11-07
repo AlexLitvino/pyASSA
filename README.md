@@ -20,7 +20,7 @@ You are writing system to control kind of a robot.
 End-users don't have programming skills.
 So you prepare parser for spreadsheets, where end-users could write simple command sequence.
 Finally, you have a library of such command sequences, but not sure if they valid.
-You don't wan't to run every sequence and check if robot will act.
+You don't want to run every sequence and check if robot will act.
 So you could write several rules that will find some simple errors.
 (See example #2)
 
@@ -29,6 +29,7 @@ NOTE: Below by "script" term, I will mean any document with specific structure t
 
 ## Features:
 - Static analysis of scripts from selected directory (recursively) against user defined rules;
+- Presenting results as text file.
 
 
 ## Dependencies
@@ -48,7 +49,8 @@ What it will do?
 ## Examples
 
 #### Example #1
-**<< TODO >>**
+[Report validation project](../blob/master/example_documentation_project/Project%20description.md)
+Example located at `pyASSA\example_documentation_project` directory
 
 #### Example #2
 **<< TODO >>**
@@ -96,5 +98,12 @@ Core part consists of
 Ooh, many things to improve and add enhancements.
 Some TODO comments thrown about modules.
 Try to collect them here.
-- Nice HTML report
-- Error logging
+- [ ] Nice HTML report
+- [ ] Analysis statistics
+- [ ] Error handling
+- [ ] Error logging
+- [ ] Take reports path from configuration file
+- [ ] Implement `select_rules` function
+- [ ] Implement `select_scripts` function 
+- [ ] Change `get_script` and `close_script` to context manager
+- [ ] Add specifying configuration file as command line argument
