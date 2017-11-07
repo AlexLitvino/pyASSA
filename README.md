@@ -49,7 +49,7 @@ What it will do?
 ## Examples
 
 #### Example #1
-[Report validation project](/blob/master/example_documentation_project/Project%20description.md)  
+[Report validation project](/example_documentation_project/Project description.md)  
 Example located at `pyASSA\example_documentation_project` directory
 
 #### Example #2
