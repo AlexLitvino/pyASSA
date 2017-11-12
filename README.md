@@ -29,7 +29,7 @@ NOTE: Below by "script" term, I will mean any document with specific structure t
 
 ## Features:
 - Static analysis of scripts from selected directory (recursively) against user defined rules;
-- Presenting results as text file.
+- Presenting results as a text file.
 
 
 ## Dependencies
@@ -39,6 +39,7 @@ But additional libs cold be needed for implementation project specific rules.
 
 ## Hello, World!
 Just to make sure that project is doing something, you could run `assa.py` module from the project root directory.
+`path_to_pyASSA_directory_on_your_machine\pyASSA> python assa.py`
 What it will do?
 - It takes project working directory as a directory that contains scripts to be checked.
 - It finds all scripts that have file extension `.py`
@@ -107,3 +108,8 @@ Try to collect them here.
 - [ ] Implement `select_scripts` function 
 - [ ] Change `get_script` and `close_script` to context manager
 - [ ] Add specifying configuration file as command line argument
+- [ ] Add possibility to run project check against mapping file <script, rule>
+- [ ] Add tests
+- [ ] Add interactive report with issue status check
+- [ ] Improve performance
+- [ ] Adding metrics
