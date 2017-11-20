@@ -35,13 +35,13 @@ All fields should be in the order above and separated by at least one empty stri
 
 Two modules should be updated with this project specific implementation:
 1. `\customization\custom_utils.py`
-- Function `is_script(root, full_file_name)` implements decision is found file a report using path to the file.
+  - Function `is_script(root, full_file_name)` implements decision is found file a report using path to the file.
 Report should follow Issue_<IssueNumber>.txt name convention to be a report.
-- Function `get_configuration_parameters(config)` adds project specific parameters features and priorities from config.ini file to kwargs parameter that could be used in rules. 
-- Function `get_script(script_path)` return list of lines from report file for further analysis.
-- Function `report_parser(report)` is this project specific function that parses list of reports lines into dictionary {section_name: section_value}.
+  - Function `get_configuration_parameters(config)` adds project specific parameters features and priorities from config.ini file to kwargs parameter that could be used in rules. 
+  - Function `get_script(script_path)` return list of lines from report file for further analysis.
+  - Function `report_parser(report)` is this project specific function that parses list of reports lines into dictionary {section_name: section_value}.  
 2. `\customization\rules_definition.py`
-- Implementation of required rules as functions:
+  - Implementation of required rules as functions:
     - Description added by decorator;
     - Name of function reflects rule;
     - At first parsed_report is taken from report lines:
@@ -58,4 +58,3 @@ Report should follow Issue_<IssueNumber>.txt name convention to be a report.
 4. Find report in `pyASSA\reports` directory.
 
 ##### P.S. It is example. Everything could be improved :)
-
