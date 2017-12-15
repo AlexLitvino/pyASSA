@@ -52,4 +52,4 @@ result_logger.setLevel(logging.INFO)
 
 error_logger = logging.getLogger(ERROR_LOGGER_NAME)
 error_logger.addHandler(error_handler)
-error_logger.setLevel(logging.ERROR)
+error_logger.setLevel(logging.INFO)
