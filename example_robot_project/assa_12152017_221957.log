@@ -1,0 +1,96 @@
+Performing analysis of scripts from directory:
+.
+
+11 rules are found:
+ - [ERROR]: For every scenario row, Command value should NOT be empty.
+ - [ERROR]: For 'MOVE' command Parameter could be 'Forward' or 'Backward', and Value should be Integer greater or equal to zero.
+ - [ERROR]: For 'ROTATE' command Parameter could be 'Clockwise' or 'Counterclockwise', and Value should be Integer in range 0 .. 360 inclusevily.
+ - [ERROR]: First row should contain column names: 'Command', 'Parameter', 'Value'.
+ - [ERROR]: For 'SET_STATE' command Parameter could be 'Velocity' or 'Battery' with valid values.
+ - [ERROR]: Scenario file should contain sheet with name 'Scenario'.
+ - [ERROR]: For 'TAKE' command Parameter and Value should be empty.
+ - [ERROR]: For 'COMMENT' command Parameter should be empty.
+ - [ERROR]: Unknown command.
+ - [WARNING]: For 'COMMENT' command Value shouldn't be empty string.
+ - [WARNING]: Scenario file should contain only one sheet.
+
+.\example_robot_project\scripts\RobotScenario_10_Comment.xlsx analysis:
+[ERROR] Step 3 with 'COMMENT' command has not empty Parameter value.
+[WARNING] Step 4 with 'COMMENT' command has empty Value parameter.
+Script analysis completed.
+
+.\example_robot_project\scripts\RobotScenario_11_Set_state.xlsx analysis:
+[ERROR] Step 6 with 'SET_STATE' and Parameter = 'Velocity' has Value value '-1' less than zero.
+[ERROR] Step 7 with 'SET_STATE' has Value value '1,78' that is not integer.
+[ERROR] Step 8 with 'SET_STATE' has Value value '1.78' that is not integer.
+[ERROR] Step 9 with 'SET_STATE' has Value value 'dfggh' that is not integer.
+[ERROR] Step 15 with 'SET_STATE' and Parameter = 'Battery' has Value value '-5' out of range [0 .. 100] or not multiple to 5.
+[ERROR] Step 16 with 'SET_STATE' and Parameter = 'Battery' has Value value '105' out of range [0 .. 100] or not multiple to 5.
+[ERROR] Step 17 with 'SET_STATE' and Parameter = 'Battery' has Value value '26' out of range [0 .. 100] or not multiple to 5.
+[ERROR] Step 18 with 'SET_STATE' has Value value '1,78' that is not integer.
+[ERROR] Step 19 with 'SET_STATE' has Value value '1.78' that is not integer.
+[ERROR] Step 20 with 'SET_STATE' has Value value 'dfggh' that is not integer.
+[ERROR] Step 21 with 'SET_STATE' command has 'Unknown_parameter' Parameter value instead of 'Velocity' or 'Battery' values.
+Script analysis completed.
+
+.\example_robot_project\scripts\RobotScenario_1_Correct_scenario.xlsx analysis:
+Script analysis completed.
+
+.\example_robot_project\scripts\RobotScenario_2_Extra_sheets.xlsx analysis:
+[WARNING] Script contains 3 sheet(s) instead of one sheet: {'Scenario', 'One more', 'Extra_2'}
+Script analysis completed.
+
+.\example_robot_project\scripts\RobotScenario_3_No_scenario_sheet.xlsx analysis:
+Error was occurred when applied rule_error_empty_command.
+Error was occurred when applied rule_error_incorrect_move_command.
+Error was occurred when applied rule_error_incorrect_rotate_command.
+Error was occurred when applied rule_error_incorrect_scenario_headers.
+Error was occurred when applied rule_error_incorrect_set_state_command.
+[ERROR] Scenario file doesn't contain 'Scenario' sheet.
+Error was occurred when applied rule_error_not_empty_parameter_and_value_for_take_command.
+Error was occurred when applied rule_error_not_empty_parameter_for_comment_command.
+Error was occurred when applied rule_error_unknown_command.
+Error was occurred when applied rule_warning_empty_value_for_comment_command.
+[WARNING] Script contains 2 sheet(s) instead of one sheet: {'One more', 'Extra_2'}
+Script analysis completed.
+
+.\example_robot_project\scripts\RobotScenario_4_Incorrect_header.xlsx analysis:
+[ERROR] Header is not ['Command', 'Parameter', 'Value'] row.
+Script analysis completed.
+
+.\example_robot_project\scripts\RobotScenario_5_Empty_commands.xlsx analysis:
+[ERROR] In rows [3, 6, 11] Command field is empty.
+[ERROR] Steps 3 contains unknown command 'None'.
+[ERROR] Steps 6 contains unknown command 'None'.
+[ERROR] Steps 11 contains unknown command 'None'.
+Script analysis completed.
+
+.\example_robot_project\scripts\RobotScenario_6_Unknown_command.xlsx analysis:
+[ERROR] Steps 16 contains unknown command 'UNKNOWN COMMAND'.
+Script analysis completed.
+
+.\example_robot_project\scripts\RobotScenario_7_Move.xlsx analysis:
+[ERROR] Step 6 with 'MOVE' command has 'Somewhere' Parameter value instead of 'Forward' or 'Backward' values.
+[ERROR] Step 7 with 'MOVE' has Value value '1.7' that is not integer.
+[ERROR] Step 8 with 'MOVE' has Value value 'qw' that is not integer.
+[ERROR] Step 9 with 'MOVE' has Value value '1,7' that is not integer.
+[ERROR] Step 10 with 'MOVE' has Value value '-10' less than zero.
+Script analysis completed.
+
+.\example_robot_project\scripts\RobotScenario_8_Rotate.xlsx analysis:
+[ERROR] Step 8 with 'ROTATE' command has 'Forward' Parameter value instead of 'Clockwise' or 'Counterclockwise' values.
+[ERROR] Step 9 with 'ROTATE' has Value value '-1' out of range [0 .. 360] degrees.
+[ERROR] Step 10 with 'ROTATE' has Value value '361' out of range [0 .. 360] degrees.
+[ERROR] Step 11 with 'ROTATE' has Value value '1,7' that is not integer.
+[ERROR] Step 12 with 'ROTATE' has Value value '1.7' that is not integer.
+[ERROR] Step 13 with 'ROTATE' has Value value 'asdfgh' that is not integer.
+Script analysis completed.
+
+.\example_robot_project\scripts\RobotScenario_9_Take.xlsx analysis:
+[ERROR] Step 4 with 'TAKE' command has not empty Parameter value.
+[ERROR] Step 5 with 'TAKE' command has not empty Value value.
+[ERROR] Step 6 with 'TAKE' command has not empty Parameter value.
+[ERROR] Step 6 with 'TAKE' command has not empty Value value.
+Script analysis completed.
+
+Analysis completed in 0.24 seconds.
