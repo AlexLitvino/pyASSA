@@ -3,7 +3,7 @@
 ## Description
 pyASSA is a framework for static analysis.
 When you writing code on Java, C# or Python, IDE could help you with finding issues.
-But if your results not supported by existing tool?
+But if your results are not supported by existing tool?
 Or existing tool doesn't support finding specific issue?
 Usually you should perform review of such documents.
 You have a checklist and go across the document checking it against checklist.
@@ -32,9 +32,10 @@ NOTE: Below by "script" term, I will mean any document with specific structure t
 - Presenting results as a text file.
 
 
-## Dependencies
-Project is written on pure Python. No additional libs is required.
+## Environment and Dependencies
+Project is written on pure Python. No additional libs are required.
 But additional libs cold be needed for implementation project specific rules.
+Tested on Python 3.5.2, Windows 7.
 
 
 ## Hello, World!
@@ -54,7 +55,8 @@ What it will do?
 Example located at `pyASSA\example_documentation_project` directory
 
 #### Example #2
-**<< TODO >>**
+[Robot scenario validation project](example_robot_project/Project%20description.md)  
+Example located at `pyASSA\example_robot_project` directory
 
 
 ## Project structure

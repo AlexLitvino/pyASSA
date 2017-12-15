@@ -49,7 +49,7 @@ Report should follow Issue_<IssueNumber>.txt name convention to be a report.
     report = kwargs["script"]
     parsed_report = report_parser(report)
      ```
-    *NOTE: this operation could be made in `get_script(script_path)` function and parsed data will be sent to every rule - kind of optimization. Why I send not parsed data to every rule is because we could have a rule that will check structure of report - all required sections, their orders. But for this case we also could add to kwargs parsed data as "script" variable  because it is used more often - and other variable with not parsed data. Here the place where you could make optimization for analysis running - perform most general evaluation before sending data to rules functions.*
+    *NOTE: this operation could be made in `get_script(script_path)` function and parsed data will be sent to every rule - kind of optimization. Why I send not parsed data to every rule is because we could have a rule that will check structure of report - all required sections, their orders. But for this case we also could add to kwargs parsed data as "script" variable because it is used more often - and other variable with not parsed data. Here the place where you could make optimization for analysis running - perform most general evaluation before sending data to rules functions.*
 
 ### How to run this project
 1. Replace directory `pyASSA\customization` with directory `pyASSA\example_documentation_project\customization`. 

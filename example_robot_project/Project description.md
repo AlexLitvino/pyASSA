@@ -4,8 +4,8 @@
 
 There're a robots on game field. 
 Robot should move on specific trajectory and picks some objects.
-The trajectory and points of picking-objects defined by users.
-Users are not programmers and pretty simple language are created for them.
+The trajectory and points of picking-objects is defined by users.
+Users are not programmers and pretty simple language is created for them.
 To control robot, user should specify list of actions that should be applied to robot in Excel file.
 
 Commands to control robot specified in table below:
