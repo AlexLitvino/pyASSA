@@ -15,11 +15,12 @@
 # -----------------------------------------------------------------------------
 
 import configparser
+import traceback
 from time import clock
 from utils import get_rules, select_rules
 from utils import get_script_files, select_scripts
 from utils import print_log_header
-from logger import result_logger
+from logger import result_logger, error_logger
 import customization.rules_definition
 from customization.custom_utils import get_configuration_parameters
 from customization.custom_utils import get_script, close_script
@@ -34,8 +35,9 @@ def script_analyser(script_path, rules, **kwargs):  # TODO: calculate how many r
     :return: None
     """
 
-    # TODO: add BEAUTIFUL error handling!!!
     result_logger.info("{script} analysis:".format(script=script_path))
+    error_logger.info("{script} analysis:".format(script=script_path))
+    error_logger.info("")
     script = get_script(script_path)
     try:
         # TODO: create function that will return file-like object based on path and will use context manager
@@ -45,15 +47,18 @@ def script_analyser(script_path, rules, **kwargs):  # TODO: calculate how many r
                 rule(**kwargs)
             except NotImplementedError:
                 pass
-            except:
+            except Exception:  # catch ANY rule exception
                 result_logger.info("Error was occurred when applied {rule}.".format(rule=rule.__name__))
-    except:
+                error_logger.error(traceback.format_exc())
+    except Exception:  # catch ANY file exception
         result_logger.info("{script} wasn't opened".format(script=script_path))
-        # log that current script wasn't opened
+        error_logger.error(traceback.format_exc())
     finally:
         close_script(script)
         result_logger.info("Script analysis completed.")
         result_logger.info("")
+        error_logger.info("*"*80)
+        error_logger.info("")
 
 
 def runner(configuration_file):

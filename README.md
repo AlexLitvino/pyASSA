@@ -103,8 +103,8 @@ Some TODO comments thrown about modules.
 Try to collect them here.
 - [ ] Nice HTML report
 - [ ] Analysis statistics
-- [ ] Error handling
-- [ ] Error logging
+- [x] Error handling
+- [x] Error logging
 - [ ] Take reports path from configuration file
 - [ ] Implement `select_rules` function
 - [ ] Implement `select_scripts` function 
