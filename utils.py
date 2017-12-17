@@ -20,6 +20,7 @@
 # -----------------------------------------------------------------------------
 
 import os
+import inspect
 from logger import result_logger
 from customization.custom_utils import is_script
 
@@ -98,7 +99,10 @@ def print_log_header(scripts_directory, selected_rules):
     result_logger.info("{number_of_rules} rules are found:".format(number_of_rules=len(selected_rules)))
     for rule in selected_rules:
         if hasattr(rule, "__description__"):
-            result_logger.info(rule.__description__)
+            rule_description = rule.__description__
         else:
-            result_logger.info(rule.__name__)
+            rule_description = rule.__name__
+        if "raise NotImplementedError" in inspect.getsource(rule):
+            rule_description = " - [NOT IMPLEMENTED RULE]" + rule_description
+        result_logger.info(rule_description)
     result_logger.info("")
