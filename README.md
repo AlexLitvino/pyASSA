@@ -111,7 +111,9 @@ Try to collect them here.
 - [ ] Change `get_script` and `close_script` to context manager
 - [ ] Add specifying configuration file as command line argument
 - [ ] Add possibility to run project check against mapping file <script, rule>
+- [ ] Mapping file <script, rule> autocreation
 - [ ] Add tests
 - [ ] Add interactive report with issue status check
 - [ ] Improve performance
 - [ ] Adding metrics
+- [ ] Heatmap (colored mapping <script, rule>) 
