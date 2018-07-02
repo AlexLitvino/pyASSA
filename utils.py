@@ -71,8 +71,57 @@ def select_rules(rules, config):
     :param config: object for configuration file
     :return: rules that satisfies condition in configuration file
     """
-    # TODO: implement
-    return rules
+    rules_parameters = config["RULES"]
+    errors_condition = rules_parameters.getboolean("Errors")
+    warnings_condition = rules_parameters.getboolean("Warnings")
+    other_condition = rules_parameters.getboolean("Other")
+    skip_file_path = rules_parameters["SkipRulesFilePath"]
+    skip_condition = bool(skip_file_path)
+    exclusive_file_path = rules_parameters["ExclusiveRulesFilePath"]
+    exclusive_condition = bool(exclusive_file_path)
+    filter_exclusive_rules = rules_parameters.getboolean("FilterExclusiveRules")
+
+    selected_rules = []
+
+    def _filter_rules(rules_to_filter):
+        filtered_rules = []
+        error_rules = [rule for rule in rules_to_filter if rule.__name__.startswith("rule_error")]
+        warning_rules = [rule for rule in rules_to_filter if rule.__name__.startswith("rule_warning")]
+        other_rules = [rule for rule in rules_to_filter if ((rule.__name__.startswith("rule")) and
+                                                            (not rule.__name__.startswith("rule_error")) and
+                                                            (not rule.__name__.startswith("rule_warning")))]
+
+        skipped_rules_names = []
+        if skip_condition:
+            with open(skip_file_path, 'r') as skip_file:
+                for line in skip_file:
+                    skipped_rule_name = line[:-1] if line.endswith('\n') else line
+                    skipped_rules_names.append(skipped_rule_name)
+        skipped_rules = [rule for rule in rules_to_filter if rule.__name__ in skipped_rules_names]
+
+        if errors_condition:
+            filtered_rules.extend(error_rules)
+        if warnings_condition:
+            filtered_rules.extend(warning_rules)
+        if other_condition:
+            filtered_rules.extend(other_rules)
+        if skip_condition:
+            filtered_rules = list(set(filtered_rules) - set(skipped_rules))
+
+        return filtered_rules
+
+    if exclusive_condition:
+        exclusive_rules_names = []
+        with open(exclusive_file_path, 'r') as exclusive_file:
+            for line in exclusive_file:
+                exclusive_rule_name = line[:-1] if line.endswith('\n') else line
+                exclusive_rules_names.append(exclusive_rule_name)
+            exclusive_rules = [rule for rule in rules if rule.__name__ in exclusive_rules_names]
+            if filter_exclusive_rules:
+                selected_rules = _filter_rules(exclusive_rules)
+    else:
+        selected_rules = _filter_rules(rules)
+    return selected_rules
 
 
 def select_scripts(scripts, config):
