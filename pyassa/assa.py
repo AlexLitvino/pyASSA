@@ -17,10 +17,10 @@
 import configparser
 import traceback
 from time import clock
-from utils import get_rules, select_rules
-from utils import get_script_files, select_scripts
-from utils import print_log_header
-from logger import result_logger, error_logger
+from pyassa.utils import get_rules, select_rules
+from pyassa.utils import get_script_files, select_scripts
+from pyassa.utils import print_log_header
+from pyassa.logger import result_logger, error_logger
 import customization.rules_definition
 from customization.custom_utils import get_configuration_parameters
 from customization.custom_utils import get_script, close_script

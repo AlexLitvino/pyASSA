@@ -21,7 +21,7 @@
 
 import os
 import inspect
-from logger import result_logger
+from pyassa.logger import result_logger
 from customization.custom_utils import is_script
 
 
