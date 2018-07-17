@@ -1,0 +1,24 @@
+Summary: Too too too too too too too too too too too too too too too too too too too too many words
+
+Type: Enhancement
+
+Feature: Feature_1
+
+Build Number: 12.34.56
+
+Priority: Low
+
+Reported By: 
+
+Reported On: 12-13-1212
+
+Environment: Windows 2003/SQL Server 2005
+
+Description:
+Application crashes on clicking red button.
+
+Steps To Reproduce:
+1. Start application.
+2. Click red button.
+Actual result: Everything ok.
+Expected result: Application crashes.
