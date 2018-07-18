@@ -119,6 +119,8 @@ def select_rules(rules, config):
             exclusive_rules = [rule for rule in rules if rule.__name__ in exclusive_rules_names]
             if filter_exclusive_rules:
                 selected_rules = _filter_rules(exclusive_rules)
+            else:
+                selected_rules = exclusive_rules
     else:
         selected_rules = _filter_rules(rules)
     return selected_rules
