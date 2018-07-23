@@ -1,0 +1,3 @@
+rule_error_test1
+rule_warning_test2
+rule_notcategorized_test3

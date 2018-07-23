@@ -1,0 +1,6 @@
+rule_error_test1
+rule_error_test2
+rule_warning_test2
+rule_warning_test3
+rule_notcategorized_test1
+rule_notcategorized_test3
