@@ -69,7 +69,6 @@ class TestSelectRulesDirectlyFromRulesModule(unittest.TestCase):
         }
         self.config.read(configuration_file)
         selected_rules = select_rules(self.rules, self.config)
-        print(selected_rules)
         self.assertCountEqual([rule_warning_test1,
                               rule_warning_test3], selected_rules)
 

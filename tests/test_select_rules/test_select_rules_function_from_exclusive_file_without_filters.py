@@ -83,7 +83,6 @@ class TestSelectRulesFromExlusiveFile(unittest.TestCase):
         }
         self.config.read(configuration_file)
         selected_rules = select_rules(self.rules, self.config)
-        print(selected_rules)
         self.assertCountEqual([rule_error_test1,
                                rule_error_test2,
                                rule_warning_test2,
