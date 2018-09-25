@@ -51,11 +51,11 @@ What it will do?
 ## Examples
 
 #### Example #1
-[Report validation project](example_documentation_project/Project%20description.md)  
+[Report validation project](examples/example_documentation_project/Project%20description.md)  
 Example located at `pyASSA\example_documentation_project` directory
 
 #### Example #2
-[Robot scenario validation project](example_robot_project/Project%20description.md)  
+[Robot scenario validation project](examples/example_robot_project/Project%20description.md)  
 Example located at `pyASSA\example_robot_project` directory
 
 
