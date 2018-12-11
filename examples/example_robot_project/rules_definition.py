@@ -20,9 +20,9 @@
 # or helper functions _function_name().
 # -----------------------------------------------------------------------------
 
-from logger import result_logger
-from utils import add_description
-from .custom_utils import get_scenario_header, get_scenario_data, is_int
+from pyassa.logger import result_logger
+from pyassa.utils import add_description
+from custom_utils import get_scenario_header, get_scenario_data, is_int
 
 # TODO: Suggest testing command parameters and values based on command rule table (separate file - xsl, json, xml - ...
 # TODO: ... that describes rules for specific command)
