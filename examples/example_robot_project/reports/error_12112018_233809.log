@@ -1,0 +1,161 @@
+.\scripts\RobotScenario_10_Comment.xlsx analysis:
+
+********************************************************************************
+
+.\scripts\RobotScenario_11_Set_state.xlsx analysis:
+
+********************************************************************************
+
+.\scripts\RobotScenario_1_Correct_scenario.xlsx analysis:
+
+********************************************************************************
+
+.\scripts\RobotScenario_2_Extra_sheets.xlsx analysis:
+
+********************************************************************************
+
+.\scripts\RobotScenario_3_No_scenario_sheet.xlsx analysis:
+
+Traceback (most recent call last):
+  File "D:\PythonProjects\pyASSA_to_class_pkg\pyassa\assa.py", line 47, in script_analyser
+    rule(**kwargs)
+  File "D:\PythonProjects\pyASSA_to_class_pkg\examples\example_robot_project\rules_definition.py", line 69, in rule_error_empty_command
+    scenario_sheet = wb.get_sheet_by_name(scenario_sheet_name)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\compat\__init__.py", line 60, in new_func
+    return obj(*args, **kwargs)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 207, in get_sheet_by_name
+    return self[name]
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 233, in __getitem__
+    raise KeyError("Worksheet {0} does not exist.".format(key))
+KeyError: 'Worksheet Scenario does not exist.'
+
+Traceback (most recent call last):
+  File "D:\PythonProjects\pyASSA_to_class_pkg\pyassa\assa.py", line 47, in script_analyser
+    rule(**kwargs)
+  File "D:\PythonProjects\pyASSA_to_class_pkg\examples\example_robot_project\rules_definition.py", line 99, in rule_error_incorrect_move_command
+    scenario_sheet = wb.get_sheet_by_name(scenario_sheet_name)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\compat\__init__.py", line 60, in new_func
+    return obj(*args, **kwargs)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 207, in get_sheet_by_name
+    return self[name]
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 233, in __getitem__
+    raise KeyError("Worksheet {0} does not exist.".format(key))
+KeyError: 'Worksheet Scenario does not exist.'
+
+Traceback (most recent call last):
+  File "D:\PythonProjects\pyASSA_to_class_pkg\pyassa\assa.py", line 47, in script_analyser
+    rule(**kwargs)
+  File "D:\PythonProjects\pyASSA_to_class_pkg\examples\example_robot_project\rules_definition.py", line 122, in rule_error_incorrect_rotate_command
+    scenario_sheet = wb.get_sheet_by_name(scenario_sheet_name)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\compat\__init__.py", line 60, in new_func
+    return obj(*args, **kwargs)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 207, in get_sheet_by_name
+    return self[name]
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 233, in __getitem__
+    raise KeyError("Worksheet {0} does not exist.".format(key))
+KeyError: 'Worksheet Scenario does not exist.'
+
+Traceback (most recent call last):
+  File "D:\PythonProjects\pyASSA_to_class_pkg\pyassa\assa.py", line 47, in script_analyser
+    rule(**kwargs)
+  File "D:\PythonProjects\pyASSA_to_class_pkg\examples\example_robot_project\rules_definition.py", line 58, in rule_error_incorrect_scenario_headers
+    scenario_sheet = wb.get_sheet_by_name(scenario_sheet_name)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\compat\__init__.py", line 60, in new_func
+    return obj(*args, **kwargs)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 207, in get_sheet_by_name
+    return self[name]
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 233, in __getitem__
+    raise KeyError("Worksheet {0} does not exist.".format(key))
+KeyError: 'Worksheet Scenario does not exist.'
+
+Traceback (most recent call last):
+  File "D:\PythonProjects\pyASSA_to_class_pkg\pyassa\assa.py", line 47, in script_analyser
+    rule(**kwargs)
+  File "D:\PythonProjects\pyASSA_to_class_pkg\examples\example_robot_project\rules_definition.py", line 146, in rule_error_incorrect_set_state_command
+    scenario_sheet = wb.get_sheet_by_name(scenario_sheet_name)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\compat\__init__.py", line 60, in new_func
+    return obj(*args, **kwargs)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 207, in get_sheet_by_name
+    return self[name]
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 233, in __getitem__
+    raise KeyError("Worksheet {0} does not exist.".format(key))
+KeyError: 'Worksheet Scenario does not exist.'
+
+Traceback (most recent call last):
+  File "D:\PythonProjects\pyASSA_to_class_pkg\pyassa\assa.py", line 47, in script_analyser
+    rule(**kwargs)
+  File "D:\PythonProjects\pyASSA_to_class_pkg\examples\example_robot_project\rules_definition.py", line 173, in rule_error_not_empty_parameter_and_value_for_take_command
+    scenario_sheet = wb.get_sheet_by_name(scenario_sheet_name)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\compat\__init__.py", line 60, in new_func
+    return obj(*args, **kwargs)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 207, in get_sheet_by_name
+    return self[name]
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 233, in __getitem__
+    raise KeyError("Worksheet {0} does not exist.".format(key))
+KeyError: 'Worksheet Scenario does not exist.'
+
+Traceback (most recent call last):
+  File "D:\PythonProjects\pyASSA_to_class_pkg\pyassa\assa.py", line 47, in script_analyser
+    rule(**kwargs)
+  File "D:\PythonProjects\pyASSA_to_class_pkg\examples\example_robot_project\rules_definition.py", line 188, in rule_error_not_empty_parameter_for_comment_command
+    scenario_sheet = wb.get_sheet_by_name(scenario_sheet_name)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\compat\__init__.py", line 60, in new_func
+    return obj(*args, **kwargs)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 207, in get_sheet_by_name
+    return self[name]
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 233, in __getitem__
+    raise KeyError("Worksheet {0} does not exist.".format(key))
+KeyError: 'Worksheet Scenario does not exist.'
+
+Traceback (most recent call last):
+  File "D:\PythonProjects\pyASSA_to_class_pkg\pyassa\assa.py", line 47, in script_analyser
+    rule(**kwargs)
+  File "D:\PythonProjects\pyASSA_to_class_pkg\examples\example_robot_project\rules_definition.py", line 85, in rule_error_unknown_command
+    scenario_sheet = wb.get_sheet_by_name(scenario_sheet_name)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\compat\__init__.py", line 60, in new_func
+    return obj(*args, **kwargs)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 207, in get_sheet_by_name
+    return self[name]
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 233, in __getitem__
+    raise KeyError("Worksheet {0} does not exist.".format(key))
+KeyError: 'Worksheet Scenario does not exist.'
+
+Traceback (most recent call last):
+  File "D:\PythonProjects\pyASSA_to_class_pkg\pyassa\assa.py", line 47, in script_analyser
+    rule(**kwargs)
+  File "D:\PythonProjects\pyASSA_to_class_pkg\examples\example_robot_project\rules_definition.py", line 200, in rule_warning_empty_value_for_comment_command
+    scenario_sheet = wb.get_sheet_by_name(scenario_sheet_name)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\compat\__init__.py", line 60, in new_func
+    return obj(*args, **kwargs)
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 207, in get_sheet_by_name
+    return self[name]
+  File "D:\Python\Python35\lib\site-packages\openpyxl\workbook\workbook.py", line 233, in __getitem__
+    raise KeyError("Worksheet {0} does not exist.".format(key))
+KeyError: 'Worksheet Scenario does not exist.'
+
+********************************************************************************
+
+.\scripts\RobotScenario_4_Incorrect_header.xlsx analysis:
+
+********************************************************************************
+
+.\scripts\RobotScenario_5_Empty_commands.xlsx analysis:
+
+********************************************************************************
+
+.\scripts\RobotScenario_6_Unknown_command.xlsx analysis:
+
+********************************************************************************
+
+.\scripts\RobotScenario_7_Move.xlsx analysis:
+
+********************************************************************************
+
+.\scripts\RobotScenario_8_Rotate.xlsx analysis:
+
+********************************************************************************
+
+.\scripts\RobotScenario_9_Take.xlsx analysis:
+
+********************************************************************************
+
