@@ -20,9 +20,9 @@
 # or helper functions _function_name().
 # -----------------------------------------------------------------------------
 
-from logger import result_logger
-from utils import add_description
-from customization.custom_utils import report_parser
+from pyassa.logger import result_logger
+from pyassa.utils import add_description
+from custom_utils import report_parser
 import re
 
 
