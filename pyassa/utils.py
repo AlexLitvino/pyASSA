@@ -22,7 +22,6 @@
 import os
 import inspect
 from pyassa.logger import result_logger
-from customization.custom_utils import is_script
 
 
 def get_rules(rules_module):
@@ -38,10 +37,11 @@ def get_rules(rules_module):
     return rules
 
 
-def get_script_files(directory):
+def get_script_files(directory, is_script):
     """
     Function recursively walk directory and finds files that satisfies custom is_script() function
     :param directory: path of directory that contains scripts (inside it or inside included directories)
+    :param is_script: function that takes file root and full_file_name as parameters and returns boolean if file is script
     :return: list of scripts
     """
     script_files = []
