@@ -21,16 +21,15 @@ from pyassa.utils import get_rules, select_rules
 from pyassa.utils import get_script_files, select_scripts
 from pyassa.utils import print_log_header
 from pyassa.logger import result_logger, error_logger
-import customization.rules_definition
-from customization.custom_utils import get_configuration_parameters
-from customization.custom_utils import get_script, close_script
 
 
-def script_analyser(script_path, rules, **kwargs):  # TODO: calculate how many rules PASS/FAIL
+def script_analyser(script_path, rules, get_script=None, close_script=None, **kwargs):
     """
     Applies rules to specific script and performs result logging
     :param script_path: path to specific script
     :param rules: list of rules to be applied for script analysis
+    :param get_script: function that returns script object by its path
+    :param close_script: function that performs action on script object close
     :param kwargs: dictionary for any additional parameters
     :return: None
     """
@@ -61,9 +60,14 @@ def script_analyser(script_path, rules, **kwargs):  # TODO: calculate how many r
         error_logger.info("")
 
 
-def runner(configuration_file):
+def runner(configuration_file, rules_module=None, is_script=None, get_configuration_parameters=None, get_script=None, close_script=None):
     """
     Entry point for static analyzer
+    :param rules_module: module that contains rules
+    :param is_script: function that takes file root and full_file_name as parameters and returns boolean if file is script
+    :param get_configuration_parameters: function that creates dictionary with parameters taken from/based on configuration file object
+    :param get_script: function that returns script object by its path
+    :param close_script: function that performs action on script object close
     :param configuration_file: Path to configuration file
     :return: None
     """
@@ -77,11 +81,11 @@ def runner(configuration_file):
     kwargs = get_configuration_parameters(config)
 
     # Get script which should be analysed
-    scripts = get_script_files(scripts_directory)
+    scripts = get_script_files(scripts_directory, is_script)
     selected_scripts = select_scripts(scripts, config)
 
     # Get rules for script analysis
-    rules = get_rules(customization.rules_definition)
+    rules = get_rules(rules_module)
     selected_rules = select_rules(rules, config)
 
     # Print header to result log
@@ -91,7 +95,7 @@ def runner(configuration_file):
     start_time = clock()
 
     for script_path in selected_scripts:
-        script_analyser(script_path, selected_rules, **kwargs)
+        script_analyser(script_path, selected_rules, get_script=get_script, close_script=close_script, **kwargs)
 
     finish_time = clock()
     runtime = finish_time - start_time
@@ -99,5 +103,11 @@ def runner(configuration_file):
 
 
 if __name__ == "__main__":
+    import customization.rules_definition
+    import customization.custom_utils
     configuration_file = "..\\configuration\\config.ini"  # TODO: or take argument from command line?
-    runner(configuration_file)
+    runner(configuration_file, rules_module=customization.rules_definition,
+           is_script=customization.custom_utils.is_script,
+           get_configuration_parameters=customization.custom_utils.get_configuration_parameters,
+           get_script=customization.custom_utils.get_script,
+           close_script=customization.custom_utils.close_script)
